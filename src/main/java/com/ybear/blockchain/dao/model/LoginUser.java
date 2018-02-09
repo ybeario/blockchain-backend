@@ -1,5 +1,6 @@
 package com.ybear.blockchain.dao.model;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class LoginUser {
@@ -291,5 +292,84 @@ public class LoginUser {
 
     public void setAdditionalInfo(byte[] additionalInfo) {
         this.additionalInfo = additionalInfo;
+    }
+
+    @Override
+    public boolean equals(Object that) {
+        if (this == that) {
+            return true;
+        }
+        if (that == null) {
+            return false;
+        }
+        if (getClass() != that.getClass()) {
+            return false;
+        }
+        LoginUser other = (LoginUser) that;
+        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
+            && (this.getCellphone() == null ? other.getCellphone() == null : this.getCellphone().equals(other.getCellphone()))
+            && (this.getCellhoneVerified() == null ? other.getCellhoneVerified() == null : this.getCellhoneVerified().equals(other.getCellhoneVerified()))
+            && (this.getCode() == null ? other.getCode() == null : this.getCode().equals(other.getCode()))
+            && (this.getCreatedTime() == null ? other.getCreatedTime() == null : this.getCreatedTime().equals(other.getCreatedTime()))
+            && (this.getDisabled() == null ? other.getDisabled() == null : this.getDisabled().equals(other.getDisabled()))
+            && (this.getEmail() == null ? other.getEmail() == null : this.getEmail().equals(other.getEmail()))
+            && (this.getEmailVerified() == null ? other.getEmailVerified() == null : this.getEmailVerified().equals(other.getEmailVerified()))
+            && (this.getGender() == null ? other.getGender() == null : this.getGender().equals(other.getGender()))
+            && (this.getBirthday() == null ? other.getBirthday() == null : this.getBirthday().equals(other.getBirthday()))
+            && (this.getLocked() == null ? other.getLocked() == null : this.getLocked().equals(other.getLocked()))
+            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+            && (this.getProfileImage() == null ? other.getProfileImage() == null : this.getProfileImage().equals(other.getProfileImage()))
+            && (this.getUpdatedTime() == null ? other.getUpdatedTime() == null : this.getUpdatedTime().equals(other.getUpdatedTime()))
+            && (this.getVersion() == null ? other.getVersion() == null : this.getVersion().equals(other.getVersion()))
+            && (this.getCityId() == null ? other.getCityId() == null : this.getCityId().equals(other.getCityId()))
+            && (this.getDistrictId() == null ? other.getDistrictId() == null : this.getDistrictId().equals(other.getDistrictId()))
+            && (this.getProvinceId() == null ? other.getProvinceId() == null : this.getProvinceId().equals(other.getProvinceId()))
+            && (this.getStreet() == null ? other.getStreet() == null : this.getStreet().equals(other.getStreet()))
+            && (this.getLastUserLockRecordId() == null ? other.getLastUserLockRecordId() == null : this.getLastUserLockRecordId().equals(other.getLastUserLockRecordId()))
+            && (this.getRealNameIdentificationStatus() == null ? other.getRealNameIdentificationStatus() == null : this.getRealNameIdentificationStatus().equals(other.getRealNameIdentificationStatus()))
+            && (this.getNickName() == null ? other.getNickName() == null : this.getNickName().equals(other.getNickName()))
+            && (this.getEncodePassword() == null ? other.getEncodePassword() == null : this.getEncodePassword().equals(other.getEncodePassword()))
+            && (this.getRecommendId() == null ? other.getRecommendId() == null : this.getRecommendId().equals(other.getRecommendId()))
+            && (this.getRegisterfrom() == null ? other.getRegisterfrom() == null : this.getRegisterfrom().equals(other.getRegisterfrom()))
+            && (this.getRegisterFrom() == null ? other.getRegisterFrom() == null : this.getRegisterFrom().equals(other.getRegisterFrom()))
+            && (this.getRegisterBy() == null ? other.getRegisterBy() == null : this.getRegisterBy().equals(other.getRegisterBy()))
+            && (this.getIsTest() == null ? other.getIsTest() == null : this.getIsTest().equals(other.getIsTest()))
+            && (Arrays.equals(this.getAdditionalInfo(), other.getAdditionalInfo()));
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
+        result = prime * result + ((getCellphone() == null) ? 0 : getCellphone().hashCode());
+        result = prime * result + ((getCellhoneVerified() == null) ? 0 : getCellhoneVerified().hashCode());
+        result = prime * result + ((getCode() == null) ? 0 : getCode().hashCode());
+        result = prime * result + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
+        result = prime * result + ((getDisabled() == null) ? 0 : getDisabled().hashCode());
+        result = prime * result + ((getEmail() == null) ? 0 : getEmail().hashCode());
+        result = prime * result + ((getEmailVerified() == null) ? 0 : getEmailVerified().hashCode());
+        result = prime * result + ((getGender() == null) ? 0 : getGender().hashCode());
+        result = prime * result + ((getBirthday() == null) ? 0 : getBirthday().hashCode());
+        result = prime * result + ((getLocked() == null) ? 0 : getLocked().hashCode());
+        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
+        result = prime * result + ((getProfileImage() == null) ? 0 : getProfileImage().hashCode());
+        result = prime * result + ((getUpdatedTime() == null) ? 0 : getUpdatedTime().hashCode());
+        result = prime * result + ((getVersion() == null) ? 0 : getVersion().hashCode());
+        result = prime * result + ((getCityId() == null) ? 0 : getCityId().hashCode());
+        result = prime * result + ((getDistrictId() == null) ? 0 : getDistrictId().hashCode());
+        result = prime * result + ((getProvinceId() == null) ? 0 : getProvinceId().hashCode());
+        result = prime * result + ((getStreet() == null) ? 0 : getStreet().hashCode());
+        result = prime * result + ((getLastUserLockRecordId() == null) ? 0 : getLastUserLockRecordId().hashCode());
+        result = prime * result + ((getRealNameIdentificationStatus() == null) ? 0 : getRealNameIdentificationStatus().hashCode());
+        result = prime * result + ((getNickName() == null) ? 0 : getNickName().hashCode());
+        result = prime * result + ((getEncodePassword() == null) ? 0 : getEncodePassword().hashCode());
+        result = prime * result + ((getRecommendId() == null) ? 0 : getRecommendId().hashCode());
+        result = prime * result + ((getRegisterfrom() == null) ? 0 : getRegisterfrom().hashCode());
+        result = prime * result + ((getRegisterFrom() == null) ? 0 : getRegisterFrom().hashCode());
+        result = prime * result + ((getRegisterBy() == null) ? 0 : getRegisterBy().hashCode());
+        result = prime * result + ((getIsTest() == null) ? 0 : getIsTest().hashCode());
+        result = prime * result + (Arrays.hashCode(getAdditionalInfo()));
+        return result;
     }
 }

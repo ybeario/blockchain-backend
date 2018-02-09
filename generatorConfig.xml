@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-	<context id="context1">
+	<!-- 注意以下标签的顺序:property*,plugin*,commentGenerator?,jdbcConnection, javaTypeResolver?,javaModelGenerator,sqlMapGenerator?, 
+		javaClientGenerator?,table+ -->
+	<context id="context2">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
 		<commentGenerator>
 			<property name="suppressDate" value="true" />
 			<property name="suppressAllComments" value="true" />
@@ -15,16 +18,55 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="com.ybear.blockchain.dao.mapper" targetProject="blockchain-backend">
+		<sqlMapGenerator targetPackage="com.ybear.blockchain.dao.mapper"
+			targetProject="blockchain-backend">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-		<javaClientGenerator type="XMLMAPPER"
+		<javaClientGenerator type="ANNOTATEDMAPPER"
 			targetPackage="com.ybear.blockchain.dao.si" targetProject="blockchain-backend">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<table tableName="login_user">
 		</table>
+		<table tableName="user_role"></table>
+		<table tableName="real_name_apply"></table>
+		<table tableName="password_change_history"
+			enableDeleteByExample="false" enableDeleteByPrimaryKey="false"
+			enableUpdateByExample="false" enableUpdateByPrimaryKey="false"></table>
+	</context>
+
+
+	<context id="context1">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 注意先后顺序。上面去除注释的配置要放在数据库配置的前面，不然会报错 -->
+		<jdbcConnection connectionURL="jdbc:mysql://172.29.28.4:3306/dzj"
+			driverClass="com.mysql.jdbc.Driver" password="devops" userId="devops" />
+		<javaModelGenerator targetPackage="com.ybear.blockchain.dao.model"
+			targetProject="blockchain-backend">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.ybear.blockchain.dao.mapper"
+			targetProject="blockchain-backend">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="ANNOTATEDMAPPER"
+			targetPackage="com.ybear.blockchain.dao.si" targetProject="blockchain-backend">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table tableName="b_login_log" domainObjectName="LoginLog"
+			enableDeleteByExample="false" enableDeleteByPrimaryKey="false"
+			enableUpdateByExample="false" enableUpdateByPrimaryKey="false">
+		</table>
+		<table tableName="b_user" domainObjectName="UserInfo"></table>
+		<table tableName="b_books" domainObjectName="BookInfo"></table>
 	</context>
 
 </generatorConfiguration>
