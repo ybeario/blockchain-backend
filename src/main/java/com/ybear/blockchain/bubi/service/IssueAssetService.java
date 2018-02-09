@@ -1,6 +1,6 @@
 package com.ybear.blockchain.bubi.service;
 
-import com.ybear.blockchain.utils.TradeNoGenerator;
+import com.ybear.blockchain.common.utils.TradeNoGenerator;
 
 import bubi4j.Asset;
 import bubi4j.common.BubiServiceFactory;

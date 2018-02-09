@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ybear.blockchain.bubi.service.AuthenticationService;
 import com.ybear.blockchain.bubi.service.RegisterService;
-import com.ybear.blockchain.command.UserRegisterCommand;
 import com.ybear.blockchain.controller.annotation.ResponseWrapper;
+import com.ybear.blockchain.controller.command.UserRegisterCommand;
 
 @RestController
 @ResponseWrapper

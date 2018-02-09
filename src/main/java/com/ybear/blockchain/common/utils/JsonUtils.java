@@ -1,4 +1,4 @@
-package com.ybear.blockchain.utils;
+package com.ybear.blockchain.common.utils;
 
 import java.io.IOException;
 

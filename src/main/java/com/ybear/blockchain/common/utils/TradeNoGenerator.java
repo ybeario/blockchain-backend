@@ -1,4 +1,4 @@
-package com.ybear.blockchain.utils;
+package com.ybear.blockchain.common.utils;
 /**
  * 
  * @date 2018年1月19日下午5:26:24

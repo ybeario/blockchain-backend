@@ -1,4 +1,4 @@
-package com.ybear.blockchain.command;
+package com.ybear.blockchain.controller.command;
 /**
  * 
  * @date 2018年2月3日下午1:29:28
